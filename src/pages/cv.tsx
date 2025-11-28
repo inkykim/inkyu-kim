@@ -1,89 +1,173 @@
+import React from "react";
 
 const CV: React.FC<{ onClose?: () => void }> = ({ onClose }) => {
   return (
-    <div className="page-content" style={{ background: '#000', color: '#fff', height: '100%', overflowY: 'auto' }}>
-      <div className="column-set">
-        <div className="column-unit">
-          Colin Inkyu Kim<br />
-          <i>Architecture + AI @ MIT</i><br /><br />
-        </div>
-        <div className="column-unit">
-          I’m an architect interested in anything creative. <span style={{ color: "rgba(255, 0, 0, 0.85)" }}><br />Physica</span><span style={{ color: "rgba(255, 0, 0, 0.85)" }}>l,</span> <span style={{ color: "rgba(50, 50, 255, 0.85)" }}>digit</span><span style={{ color: "rgba(0, 0, 255, 0.85)" }}>al,</span> and <span style={{ color: "rgba(220, 50, 220, 0.85)" }}>where they inters</span><span style={{ color: "rgba(220, 50, 220, 0.85)" }}>ect.</span><br />Open to everything.<br /><br />Born in Nashville. Currently based in Boston.<br /><br />cik [at] mit [dot] edu<br />
-          <a href="https://linkedin.com/in/cik" target="_blank" rel="noopener noreferrer">linkedin.com/in/cik</a>
-        </div>
+    <div style={{ 
+      background: '#000', 
+      color: '#fff', 
+      height: '100%', 
+      overflowY: 'auto',
+      fontFamily: 'Segoe UI, sans-serif',
+      fontWeight: 300,
+      fontSize: '1.2rem',
+      lineHeight: '1.6',
+      padding: '2rem',
+      textTransform: 'lowercase',
+      scrollbarWidth: 'none',
+      msOverflowStyle: 'none',
+      position: 'relative',
+      zIndex: 1
+    }}>
+      <style jsx>{`
+        div::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
+      {/* Header */}
+      <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+        <h1 style={{ fontSize: '3rem', fontWeight: 300, margin: '0 0 0.5rem 0', color: '#fff', fontFamily: 'Segoe UI, sans-serif' }}>
+          colin inkyu kim
+        </h1>
+        <p style={{ fontSize: '1.2rem', margin: 0, opacity: 0.8, fontFamily: 'Segoe UI, sans-serif', fontWeight: 300 }}>
+          architecture + ai @ mit
+        </p>
       </div>
-      <br />
-      <hr />
-      <div className="column-set">
-        <div className="column-unit">
-          <div className="column-set">
-            <div className="column-unit">Curriculum Vitae</div>
-            {/* Overlay close button removed as requested */}
+
+      {/* About */}
+      <div style={{ marginBottom: '3rem' }}>
+        <p style={{ fontSize: '1.2rem', textAlign: 'center', lineHeight: '1.7', fontFamily: 'Segoe UI, sans-serif', fontWeight: 300 }}>
+          born in nashville, currently based in boston.{' '}<br />
+          architect interested in anything creative.{' '}
+          <br />
+          <span style={{ color: "#ff0000" }}>physical</span>,{' '}
+          <span style={{ color: "#3232ff" }}>digital</span>, and{' '}
+          <span style={{ color: "#dc32dc" }}>where they intersect</span>.
+          <br />open to everything.
+        </p>
+      </div>
+
+      {/* Education */}
+      <section style={{ marginBottom: '3rem' }}>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 300, marginBottom: '1rem', color: '#fff', fontFamily: 'Segoe UI, sans-serif' }}>
+          education
+        </h2>
+        <div style={{ marginBottom: '1.5rem' }}>
+          <h3 style={{ fontSize: '1.2rem', fontWeight: 300, margin: '0 0 0.5rem 0', fontFamily: 'Segoe UI, sans-serif' }}>
+            massachusetts institute of technology
+          </h3>
+          <p style={{ margin: '0.2rem 0', color: '#ff0000', fontFamily: 'Segoe UI, sans-serif', fontWeight: 300 }}>b.s. in architecture</p>
+          <p style={{ margin: '0.2rem 0', color: '#3232ff', fontFamily: 'Segoe UI, sans-serif', fontWeight: 300 }}>b.s. in artificial intelligence and decision making</p>
+          <p style={{ margin: '0.2rem 0', opacity: 0.8, fontFamily: 'Segoe UI, sans-serif', fontWeight: 300 }}>4.9 GPA / expected graduation 2027</p>
+        </div>
+      </section>
+
+      {/* Employment */}
+      <section style={{ marginBottom: '3rem' }}>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 300, marginBottom: '1rem', color: '#fff', fontFamily: 'Segoe UI, sans-serif' }}>
+          experience
+        </h2>
+        <div style={{ marginBottom: '2rem' }}>
+          <h3 style={{ fontSize: '1.2rem', fontWeight: 300, margin: '0 0 0.5rem 0', fontFamily: 'Segoe UI, sans-serif' }}>
+            nasdaq
+          </h3>
+          <p style={{ margin: '0.2rem 0', color: '#dc32dc', fontFamily: 'Segoe UI, sans-serif', fontWeight: 300 }}>spatial computing intern</p>
+          <p style={{ margin: '0.2rem 0 1rem 0', opacity: 0.8, fontFamily: 'Segoe UI, sans-serif', fontWeight: 300 }}>boston, massachusetts | 2025</p>
+          <p style={{ fontSize: '1.1rem', lineHeight: '1.6', opacity: 0.9, fontFamily: 'Segoe UI, sans-serif', fontWeight: 300 }}>
+            Architecting the next iteration of the Boston branch office, designing a physical layout and digital interface that replaces desktop computers with integrated mixed-reality systems to improve long-term employee productivity.
+          </p>
+        </div>
+        <div style={{ marginBottom: '2rem' }}>
+          <h3 style={{ fontSize: '1.2rem', fontWeight: 300, margin: '0 0 0.5rem 0', fontFamily: 'Segoe UI, sans-serif' }}>
+            mit self-assembly lab
+          </h3>
+          <p style={{ margin: '0.2rem 0', color: '#dc32dc', fontFamily: 'Segoe UI, sans-serif', fontWeight: 300 }}>undergraduate researcher</p>
+          <p style={{ margin: '0.2rem 0 1rem 0', opacity: 0.8, fontFamily: 'Segoe UI, sans-serif', fontWeight: 300 }}>cambridge, massachusetts | 2024</p>
+          <p style={{ fontSize: '1.1rem', lineHeight: '1.6', opacity: 0.9, fontFamily: 'Segoe UI, sans-serif', fontWeight: 300 }}>
+            Performed research analyzing and improving the load-bearing ability of algorithmically generated gravel patterns. Designed and documented various materials and configurations to aid the self-assembly of sustainable structures.
+          </p>
+        </div>
+      </section>
+
+      {/* Skills */}
+      <section style={{ marginBottom: '3rem' }}>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 300, marginBottom: '1rem', color: '#fff', fontFamily: 'Segoe UI, sans-serif' }}>
+          skills
+        </h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem' }}>
+          <div>
+            <h4 style={{ fontSize: '1.2rem', fontWeight: 300, marginBottom: '0.5rem', opacity: 0.8, fontFamily: 'Segoe UI, sans-serif' }}>design & fabrication</h4>
+            <p style={{ fontSize: '1.1rem', lineHeight: '1.6', margin: 0, fontFamily: 'Segoe UI, sans-serif', fontWeight: 300 }}>
+              Studio Art, Modelmaking, Woodworking, Welding, 3D printing
+            </p>
           </div>
-          <br />
-          <br />
-          <hr />
+          <div>
+            <h4 style={{ fontSize: '1.2rem', fontWeight: 300, marginBottom: '0.5rem', opacity: 0.8, fontFamily: 'Segoe UI, sans-serif' }}>software</h4>
+            <p style={{ fontSize: '1.1rem', lineHeight: '1.6', margin: 0, fontFamily: 'Segoe UI, sans-serif', fontWeight: 300 }}>
+              Rhino, CAD, Enscape, ClimateStudio, Adobe Creative Suite, TouchDesigner
+            </p>
+          </div>
+          <div>
+            <h4 style={{ fontSize: '1.2rem', fontWeight: 300, marginBottom: '0.5rem', opacity: 0.8, fontFamily: 'Segoe UI, sans-serif' }}>programming</h4>
+            <p style={{ fontSize: '1.1rem', lineHeight: '1.6', margin: 0, fontFamily: 'Segoe UI, sans-serif', fontWeight: 300 }}>
+              Python (PyTorch), C++ (OpenGL), JavaScript (React, p5)
+            </p>
+          </div>
+          <div>
+            <h4 style={{ fontSize: '1.2rem', fontWeight: 300, marginBottom: '0.5rem', opacity: 0.8, fontFamily: 'Segoe UI, sans-serif' }}>languages</h4>
+            <p style={{ fontSize: '1.1rem', lineHeight: '1.6', margin: 0, fontFamily: 'Segoe UI, sans-serif', fontWeight: 300 }}>
+              English (Fluent), Korean (Fluent), Latin & Ancient Greek (Reading)
+            </p>
+          </div>
         </div>
-      </div>
-      <div className="column-set">
-        <div className="column-unit">Education<br /><br /></div>
-        <div className="column-unit">
-          Massachusetts Institute of Technology<i><br /><span style={{ color: "rgba(255, 0, 0, 0.85)" }}>B.S. in Architecture</span><br />
-            <span style={{ color: "rgba(0, 0, 255, 0.85)" }}>B.S. in Artificial Intelligence and Decision Making</span>
-            <br />4.9 GPA</i><br />expected graduation 2027
+      </section>
+
+      {/* Coursework */}
+      <section style={{ marginBottom: '3rem' }}>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 300, marginBottom: '1rem', color: '#fff', fontFamily: 'Segoe UI, sans-serif' }}>
+          relevant coursework
+        </h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem' }}>
+          <div>
+            <h4 style={{ fontSize: '1.2rem', fontWeight: 300, marginBottom: '0.5rem', color: '#ff0000', fontFamily: 'Segoe UI, sans-serif' }}>architecture</h4>
+            <p style={{ fontSize: '1.1rem', lineHeight: '1.6', margin: 0, opacity: 0.9, fontFamily: 'Segoe UI, sans-serif', fontWeight: 300 }}>
+              Architecture Studio, Design Techniques & Technologies, How to Design, Art & Spatial Practices, Environmental Technologies, History of Design
+            </p>
+          </div>
+          <div>
+            <h4 style={{ fontSize: '1.2rem', fontWeight: 300, marginBottom: '0.5rem', color: '#3232ff', fontFamily: 'Segoe UI, sans-serif' }}>computer science</h4>
+            <p style={{ fontSize: '1.1rem', lineHeight: '1.6', margin: 0, opacity: 0.9, fontFamily: 'Segoe UI, sans-serif', fontWeight: 300 }}>
+              Design & Analysis of Algorithms, Intro to Algorithms, Discrete Math, Fundamentals of Programming, Intro to Machine Learning
+            </p>
+          </div>
+          <div>
+            <h4 style={{ fontSize: '1.2rem', fontWeight: 300, marginBottom: '0.5rem', color: '#dc32dc', fontFamily: 'Segoe UI, sans-serif' }}>interdisciplinary</h4>
+            <p style={{ fontSize: '1.1rem', lineHeight: '1.6', margin: 0, opacity: 0.9, fontFamily: 'Segoe UI, sans-serif', fontWeight: 300 }}>
+              Computer Graphics, PokerBots, Linear Algebra
+            </p>
+          </div>
         </div>
-      </div>
-      <br />
-      <hr />
-      <div className="column-set">
-        <div className="column-unit">Employment<br /><br /></div>
-        <div className="column-unit">
-          Nasdaq<br />
-          <i><span style={{ color: "rgba(220, 50, 220, 0.85)" }}>Spatial Computing Intern</span><br />Boston, Massachusetts<br />2025</i><br />
-          <span className="bodysmall">Architecting the next iteration of the Boston branch office, designing a physical layout and digital interface that replaces desktop computers with integrated mixed-reality systems to improve long-term employee productivity. Providing the CTO and major stakeholders with strategic consultation throughout the construction process to optimize the outlook of real estate as the company spearheads the adoption of upcoming technology at scale.</span><br />
-          MIT Self-Assembly Lab<br />
-          <i><span style={{ color: "rgba(220, 50, 220, 0.85)" }}>Undergraduate Researcher</span><br />Cambridge, Massachusetts<br />2024</i><br />
-          <span className="bodysmall">Performed research analyzing and improving the load-bearing ability of algorithmically generated gravel patterns. Designed and documented various materials and configurations to aid the self-assembly of sustainable structures.</span><br />
+      </section>
+
+      {/* Activities */}
+      <section style={{ marginBottom: '3rem' }}>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 300, marginBottom: '1rem', color: '#fff', fontFamily: 'Segoe UI, sans-serif' }}>
+          activities & interests
+        </h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem' }}>
+          <div>
+            <h4 style={{ fontSize: '1.2rem', fontWeight: 300, marginBottom: '0.5rem', opacity: 0.8, fontFamily: 'Segoe UI, sans-serif' }}>organizations</h4>
+            <p style={{ fontSize: '1.1rem', lineHeight: '1.6', margin: 0, fontFamily: 'Segoe UI, sans-serif', fontWeight: 300 }}>
+              MIT DesignPlus, MIT Lecture Series Committee, MIT Poker Club, Phi Delta Theta Fraternity
+            </p>
+          </div>
+          <div>
+            <h4 style={{ fontSize: '1.2rem', fontWeight: 300, marginBottom: '0.5rem', opacity: 0.8, fontFamily: 'Segoe UI, sans-serif' }}>interests</h4>
+            <p style={{ fontSize: '1.1rem', lineHeight: '1.6', margin: 0, fontFamily: 'Segoe UI, sans-serif', fontWeight: 300 }}>
+              Spatial Design, Audiovisual Design, Generative Art, DJing & Music Production, Filmmaking, Bouldering, Cryptic Crosswords, Tottenham Hotspur
+            </p>
+          </div>
         </div>
-      </div>
-      <hr />
-      <div className="column-set">
-        <div className="column-unit">Coursework<br /><br /></div>
-        <div className="column-unit">
-          <span style={{ color: "rgba(255, 0, 0, 0.85)" }}>4.023 Architecture Studio</span><br />4.022 Design Techniques &amp; Technologies<br />4.021 How to Design<br />4.302 Art, Design, &amp; Spatial Practices<br />4.401 Environmental Technologies in Buildings<br />4.657 History of Design<br /><br />
-          <span style={{ color: "rgba(0, 0, 255, 0.85)" }}>6.1220 Design &amp; Analysis of Algorithms</span><br />6.1210 Intro to Algorithms<br />6.1200 Discrete Math<br />6.1010 Fundamentals of Programming<br />6.3900 Intro to Machine Learning<br />
-          <span style={{ color: "rgba(220, 50, 220, 0.85)" }}>6.4400 Computer Graphics<br /></span>6.9630 PokerBots<br /><br />18.06 Linear Algebra
-        </div>
-      </div>
-      <br />
-      <hr />
-      <div className="column-set">
-        <div className="column-unit">Skills<br /><br /></div>
-        <div className="column-unit">
-          Studio Art<br />Modelmaking<br />Woodworking<br />Welding<br />3D printing<br /><br />Rhino<br />CAD<br />Enscape<br />ClimateStudio<br /><br />Photoshop<br />Illustrator<br />InDesign<br />After Effects<br />Premiere Pro<br />TouchDesigner<br /><br />Python — PyTorch<br />C++ — OpenGL<br />JavaScript — React, p5<br /><br />English — Fluent<br />Korean — Fluent<br />Latin — Reading Proficiency<br />Ancient Greek — Reading Proficiency<br /><br />
-        </div>
-      </div>
-      <br />
-      <div className="column-set">
-        <div className="column-unit">Affiliations<br /></div>
-        <div className="column-unit">
-          MIT DesignPlus<br />MIT Lecture Series Committee<br />MIT Poker Club<br />Phi Delta Theta Fraternity (Mass Gamma)
-        </div>
-      </div>
-      <br />
-      <div className="column-set">
-        <div className="column-unit">Interests<br /><br /></div>
-        <div className="column-unit">
-          Spatial Design<br />Audiovisual Design<br />Graphic Design<br />Generative Art<br />DJing &amp; Music Production<br />Filmmaking<br />Bouldering<br />Cryptic Crosswords<br />Tottenham Hotspur
-        </div>
-      </div>
-      <hr />
-      <div className="column-set column-set-gutter-2">
-        <div className="column-unit"></div>
-        <div className="column-unit" style={{ textAlign: "right" }}>
-          <a href="#top" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} rel="top">(Back to top)</a>
-        </div>
-      </div>
+      </section>
     </div>
   );
 };
