@@ -185,7 +185,6 @@ function render(): void {
     ? 360 - (normalizedHue / 120) * 60  // 360 down to 300
     : 300 - ((normalizedHue - 120) / 120) * 60; // 300 down to 240
   ctx.strokeStyle = "hsla(" + Math.round(mappedHue) + ",100%,50%,0.025)";
-  
   ctx.lineWidth = 10;
   
   for (let i = 0; i < lines.length; i++) {

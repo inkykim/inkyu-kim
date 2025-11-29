@@ -3,7 +3,7 @@ import React from "react";
 const CV: React.FC<{ onClose?: () => void }> = ({ onClose }) => {
   return (
     <div style={{ 
-      background: '#000', 
+      background: 'transparent', 
       color: '#fff', 
       height: '100%', 
       overflowY: 'auto',
@@ -16,8 +16,12 @@ const CV: React.FC<{ onClose?: () => void }> = ({ onClose }) => {
       scrollbarWidth: 'none',
       msOverflowStyle: 'none',
       position: 'relative',
-      zIndex: 1
-    }}>
+      zIndex: 30,
+      userSelect: 'none',
+      WebkitUserSelect: 'none',
+      MozUserSelect: 'none',
+      msUserSelect: 'none'
+    }}>;
       <style jsx>{`
         div::-webkit-scrollbar {
           display: none;
@@ -71,7 +75,7 @@ const CV: React.FC<{ onClose?: () => void }> = ({ onClose }) => {
             nasdaq
           </h3>
           <p style={{ margin: '0.2rem 0', color: '#dc32dc', fontFamily: 'Segoe UI, sans-serif', fontWeight: 300 }}>spatial computing intern</p>
-          <p style={{ margin: '0.2rem 0 1rem 0', opacity: 0.8, fontFamily: 'Segoe UI, sans-serif', fontWeight: 300 }}>boston, massachusetts | 2025</p>
+          <p style={{ margin: '0.2rem 0 1rem 0', opacity: 0.8, fontFamily: 'Segoe UI, sans-serif', fontWeight: 300 }}>boston, massachusetts / 2025</p>
           <p style={{ fontSize: '1.1rem', lineHeight: '1.6', opacity: 0.9, fontFamily: 'Segoe UI, sans-serif', fontWeight: 300 }}>
             Architecting the next iteration of the Boston branch office, designing a physical layout and digital interface that replaces desktop computers with integrated mixed-reality systems to improve long-term employee productivity.
           </p>
@@ -81,7 +85,7 @@ const CV: React.FC<{ onClose?: () => void }> = ({ onClose }) => {
             mit self-assembly lab
           </h3>
           <p style={{ margin: '0.2rem 0', color: '#dc32dc', fontFamily: 'Segoe UI, sans-serif', fontWeight: 300 }}>undergraduate researcher</p>
-          <p style={{ margin: '0.2rem 0 1rem 0', opacity: 0.8, fontFamily: 'Segoe UI, sans-serif', fontWeight: 300 }}>cambridge, massachusetts | 2024</p>
+          <p style={{ margin: '0.2rem 0 1rem 0', opacity: 0.8, fontFamily: 'Segoe UI, sans-serif', fontWeight: 300 }}>cambridge, massachusetts / 2024</p>
           <p style={{ fontSize: '1.1rem', lineHeight: '1.6', opacity: 0.9, fontFamily: 'Segoe UI, sans-serif', fontWeight: 300 }}>
             Performed research analyzing and improving the load-bearing ability of algorithmically generated gravel patterns. Designed and documented various materials and configurations to aid the self-assembly of sustainable structures.
           </p>
@@ -95,7 +99,7 @@ const CV: React.FC<{ onClose?: () => void }> = ({ onClose }) => {
         </h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem' }}>
           <div>
-            <h4 style={{ fontSize: '1.2rem', fontWeight: 300, marginBottom: '0.5rem', opacity: 0.8, fontFamily: 'Segoe UI, sans-serif' }}>design & fabrication</h4>
+            <h4 style={{ fontSize: '1.2rem', fontWeight: 300, marginBottom: '0.5rem', opacity: 0.8, fontFamily: 'Segoe UI, sans-serif' }}>fabrication</h4>
             <p style={{ fontSize: '1.1rem', lineHeight: '1.6', margin: 0, fontFamily: 'Segoe UI, sans-serif', fontWeight: 300 }}>
               Studio Art, Modelmaking, Woodworking, Welding, 3D printing
             </p>
@@ -163,7 +167,7 @@ const CV: React.FC<{ onClose?: () => void }> = ({ onClose }) => {
           <div>
             <h4 style={{ fontSize: '1.2rem', fontWeight: 300, marginBottom: '0.5rem', opacity: 0.8, fontFamily: 'Segoe UI, sans-serif' }}>interests</h4>
             <p style={{ fontSize: '1.1rem', lineHeight: '1.6', margin: 0, fontFamily: 'Segoe UI, sans-serif', fontWeight: 300 }}>
-              Spatial Design, Audiovisual Design, Generative Art, DJing & Music Production, Filmmaking, Bouldering, Cryptic Crosswords, Tottenham Hotspur
+              Generative Art, Music Production, Filmmaking, Cryptic Crosswords, Tottenham Hotspura
             </p>
           </div>
         </div>
